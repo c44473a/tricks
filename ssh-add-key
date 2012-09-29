@@ -1,0 +1,9 @@
+#!/bin/bash
+#Trick for ssh-add error: Could not open a connection to your authentication agent.
+#
+#example: ssh-add-key /home/key
+#
+
+eval $(ssh-agent)
+ssh-add "$1"
+
